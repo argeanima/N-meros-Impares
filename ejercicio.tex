@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+
+\begin{document}
+Resuelve la siguiente ecuación en diferencias
+$$x_{n+2}=2x_{n+1}-x_{n}^{(*)}$$
+
+donde
+
+$$x_{o}=-1,x_{1}=1$$
+
+\textbf{Solución:}
+
+Podriamos intentar resolver el problema planteando la ecuación resolvente.
+$$r^{2}=2r-1$$
+igualando a cero
+$$r^{2}-2r+1=0$$
+Sin embargo, al resolver la ecuación de segundo grado nos damos cuenta de que solo tiene una solución $r=1$, por lo cual este método no nos lleva a una solución. Otra opción viable es desarrollar la suseción.
+$$x_{2}=2x_{1}-x_{0}=2(1)-(-1)=3$$
+$$x_{3}=2x_{2}-x_{1}=2(3)-(1)=5$$
+$$x_{4}=2x_{3}-x_{2}=2(5)-(3)=7$$
+$$\vdots$$
+Podemos observar que la suseción parecen ser los números impares, por lo cual, una posible solución es $x_{n}=2n-1$, lo cual podermos comprobar al sustitur esta  solucón en $(*)$.
+$$2x_{n+1}-x_{n}=2(2(n+1)-1)-(2n-1)=2n+3=2(n+2)-1=x_{n+2}$$
+
+\end{document}
