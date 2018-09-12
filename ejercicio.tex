@@ -3,15 +3,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
-
+\usepackage{gensymb}
 \begin{document}
+
+\begin{enumerate}
+\item \textbf{Números impares}
+  
 Resuelve la siguiente ecuación en diferencias
 $$x_{n+2}=2x_{n+1}-x_{n}^{(*)}$$
-
 donde
-
 $$x_{o}=-1,x_{1}=1$$
-
 \textbf{Solución:}
 
 Podriamos intentar resolver el problema planteando la ecuación resolvente.
@@ -26,4 +27,24 @@ $$\vdots$$
 Podemos observar que la suseción parecen ser los números impares, por lo cual, una posible solución es $x_{n}=2n-1$, lo cual podermos comprobar al sustitur esta  solucón en $(*)$.
 $$2x_{n+1}-x_{n}=2(2(n+1)-1)-(2n-1)=2n+3=2(n+2)-1=x_{n+2}$$
 
+\item \textbf{Problema de enfriamiento}
+
+Una taza de café tiene una temperatura incial de $165F^{\circ}$, pero se enfría a $155F^{\circ}$ en un minuto en una habitación con temperatuda de $70F^{\circ}$. Sea $T_{n}$ la temperatura del café después de $n$ minutos, encuentra una formula para $T_{n}$ y grafícala.
+
+\textbf{Solución:}
+
+Por la ley del enfriamiento se sabe que la diferencia entre la temperatura final y la temperatura inicial de un objeto que se enfría es proporcional a la diferencia entre la temperatura inicial y la temperatura ambiental $T_{a}$, e.i. existe una $k$ en los reales, tal que
+$$T_{n}-T_{n-1}=k
+\left(
+  T_{a}-T_{n-1}
+\right)$$
+Despejando a $k$ y sustituyento los datos en la ecuación se obtiene que
+$$k=\frac{T_{n}-T_{n-1}}{ T_{a}-T_{n-1}}=\frac{165-155}{70-165}=-\frac{10}{95}=-\frac{2}{19}$$
+De tal manera que ahora podemos plantear una ecuacion en diferencias a partir de
+$$T_{n}-T_{n-1}=\frac{2}{19}
+\left(
+  70-T_{n-1}
+\right)$$
+$$\Rightarrow T_{n}=\frac{17}{19} T_{n-1}+\frac{140}{19}$$
+\end{enumerate}
 \end{document}
